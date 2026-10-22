@@ -2,7 +2,7 @@
 
 Telegram discussion-platform interface and UI integration prototype.
 
-Solo-developed by [Vojislav Beric](https://github.com/Smileyface101).
+Solo-developed by [Vojislav Beric](https://github.com/Goodworkid0).
 
 ## What it does
 
