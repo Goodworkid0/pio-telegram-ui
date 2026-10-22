@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary - Telegram Blue */
+  --primary: #0088cc;
+  --primary-hover: #0077b5;
+  --primary-light: #e5f4fb;
+  
+  /* Accent - Electric Purple */
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  
+  /* Neutrals */
+  --background: #ffffff;
+  --surface: #f9fafb;
+  --surface-dark: #111827;
+  --text: #111827;
+  --text-secondary: #6b7280;
+  
+  /* Success */
+  --success: #10b981;
+  
+  /* Telegram Theme Variables (injected by TelegramProvider) */
+  --tg-bg-color: #ffffff;
+  --tg-text-color: #000000;
+  --tg-hint-color: #999999;
+  --tg-link-color: #2481cc;
+  --tg-button-color: #2481cc;
+  --tg-button-text-color: #ffffff;
+  --tg-secondary-bg-color: #f0f0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --surface: #1e293b;
+    --text: #f1f5f9;
+    --text-secondary: #94a3b8;
+  }
+}
+
+/* Blob animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(50px, 50px) scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 20s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--primary-light);
+  color: var(--text);
+}
+
+/* Code blocks */
+pre {
+  font-family: var(--font-jetbrains), 'Courier New', monospace;
+}
+
+/* Animations */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+code {
+  font-family: var(--font-jetbrains), 'Courier New', monospace;
+}
